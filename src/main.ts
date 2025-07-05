@@ -63,29 +63,6 @@ prevBtn.addEventListener("click", (e) => {
 imageBox.addEventListener("click", (e) => {
   // Agar rasm yoki buttonlarga bosilsa modal yopilmasin
   if (e.target === imageBox) {
-    imageBox.style.display = "none";
-    
-    // Rasmni tozalash
-    if (currentImage) {
-      currentImage.remove();
-      currentImage = null;
-    }
-  }
-});
-
-// Keyboard navigation (ixtiyoriy)
-document.addEventListener("keydown", (e) => {
-  if (imageBox.style.display === "flex") {
-    if (e.key === "ArrowRight") {
-      nextBtn.click();
-    } else if (e.key === "ArrowLeft") {
-      prevBtn.click();
-    } else if (e.key === "Escape") {
-      imageBox.style.display = "none";
-      if (currentImage) {
-        currentImage.remove();
-        currentImage = null;
-      }
-    }
+    imageBox.style.display = "none";  
   }
 });
